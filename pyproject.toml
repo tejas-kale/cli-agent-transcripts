@@ -1,7 +1,7 @@
 [project]
 name = "cc-transcripts"
 version = "0.1.0"
-description = "A tool to save Gemini CLI and Claude Code transcripts to Markdown."
+description = "A tool to save Gemini CLI and Claude Code transcripts to HTML."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

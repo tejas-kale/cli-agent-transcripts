@@ -1,6 +1,6 @@
 # CC Transcripts
 
-A tool to export conversation history from **Gemini CLI** and **Claude Code** into clean, readable Markdown files.
+A tool to export conversation history from **Gemini CLI** and **Claude Code** into clean, readable, and interactive HTML files.
 
 ## Installation
 
@@ -23,7 +23,7 @@ The tool will display a list of the **10 latest** sessions. You can enter:
 -   **`all`** to save all 10 displayed transcripts.
 -   **`q`** to quit.
 
-The selected files will be saved to the `transcripts/` directory (default).
+The selected files will be saved to the `transcripts/` directory by default.
 
 ### Options
 
@@ -41,8 +41,13 @@ cc-transcripts --source gemini
 
 ## Features
 
--   **Gemini CLI Support**: extracting chats from the temporary directory.
--   **Claude Code Support**: Parsing project-based JSONL session files.
--   **Robust Interactive Selection**: Simple text-based selection works in all terminals.
--   **Smart Titles**: Automatically extracts the first user message as the title.
--   **Clean Markdown**: Formats user prompts, model responses, and tool calls/command outputs clearly.
+-   **Multi-Source Support**: 
+    -   **Gemini CLI**: Automatically finds and extracts chats from `~/.gemini/tmp/`.
+    -   **Claude Code**: Parses project-based JSONL session files from `~/.claude/projects/`.
+-   **Interactive Selection**: Easily browse and select recent sessions directly from your terminal.
+-   **AI-Powered Titles**: Uses Gemini (via the `llm` library) to generate concise, descriptive titles for your transcripts based on their content.
+-   **Beautiful HTML Export**:
+    -   Clean, modern design.
+    -   Syntax highlighting for code blocks.
+    -   **Collapsible Tool Calls**: Detailed view of tool inputs and results that stays out of the way until you need it.
+-   **Automatic Sanitization**: Filenames are automatically sanitized for compatibility across different operating systems.
